@@ -103,6 +103,7 @@ class LandingPage extends StatelessWidget {
                         child: InkWell(
                           //Function
                           onTap: () {
+                            Navigator.of(context).pushNamed('/login');
                             debugPrint("Tapped on GET STARTED");
                           },
                           child: Container(
