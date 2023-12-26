@@ -26,7 +26,7 @@ class LandingPage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height / 1.6,
                     decoration: const BoxDecoration(
-                      color: Color(0xFFD5A09D),
+                      color: Color(0xFF3DB2FF),
                       borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(100.0),
                       ),
@@ -47,7 +47,7 @@ class LandingPage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height / 2.666,
                   decoration: const BoxDecoration(
-                    color: Color(0xFFD5A09D),
+                    color: Color(0xFF3DB2FF),
                   ),
                 ),
               ),
@@ -98,7 +98,7 @@ class LandingPage extends StatelessWidget {
                         height: 15.0,
                       ),
                       Material(
-                        color: const Color(0xFFD5A09D),
+                        color: const Color(0xFF3DB2FF),
                         borderRadius: BorderRadius.circular(20.0),
                         child: InkWell(
                           //Function
