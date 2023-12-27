@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286337204652",
+    "project_id": "smarttravel-b1d56",
+    "storage_bucket": "smarttravel-b1d56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286337204652:android:a2a1595639573a5c47ba09",
+        "android_client_info": {
+          "package_name": "com.example.i_tour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO_K0b0LitbDKklsHF8M-uWPDKUunNl1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
