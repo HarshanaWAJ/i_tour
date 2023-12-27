@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:i_tour/components/my_button.dart';
 import 'package:i_tour/components/textfield.dart';
 
 class LoginPage extends StatelessWidget {
+  //Sign In Method
+
   final usernamecontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
 
@@ -29,7 +32,7 @@ class LoginPage extends StatelessWidget {
               height: 20.0,
             ),
             const Padding(
-              padding: EdgeInsets.all(40.0),
+              padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 40.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -42,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 10.0,
                   ),
                   Text(
                     "Welcome Back,",
@@ -77,7 +80,7 @@ class LoginPage extends StatelessWidget {
                     child: Column(
                       children: [
                         const SizedBox(
-                          height: 50.0,
+                          height: 10.0,
                         ),
                         MyTextField(
                             controller: usernamecontroller,
@@ -88,6 +91,15 @@ class LoginPage extends StatelessWidget {
                             controller: passwordcontroller,
                             hintText: "Password",
                             obsecureText: true),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        MyButton(
+                          onTap: () {
+                            // Assign an anonymous function directly
+                            Navigator.pushNamed(context, '/register');
+                          },
+                        ),
                         const SizedBox(
                           height: 20.0,
                         ),
@@ -123,6 +135,28 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                           ],
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        const Text(
+                          "Or",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        const Text(
+                          "Continue With,",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.w500,
+                          ),
                         )
                       ],
                     ),

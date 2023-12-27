@@ -6,10 +6,15 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      child: const Text(
-        "Regiter Page",
-        style: TextStyle(color: Colors.black, fontSize: 20.0),
+      color: const Color(0xFF3DB2FF),
+      child: const Center(
+        child: Text(
+          "Registration",
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 20.0,
+              decoration: TextDecoration.none),
+        ),
       ),
     );
   }
