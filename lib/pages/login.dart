@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_tour/components/image_button.dart';
 import 'package:i_tour/components/my_button.dart';
 import 'package:i_tour/components/textfield.dart';
 
@@ -96,12 +97,16 @@ class LoginPage extends StatelessWidget {
                         ),
                         MyButton(
                           onTap: () {
-                            // Assign an anonymous function directly
+                            //Logics to Login
                             Navigator.pushNamed(context, '/register');
                           },
                         ),
                         const SizedBox(
                           height: 20.0,
+                        ),
+                        const Divider(
+                          color: Color(0xFF3DB2FF),
+                          thickness: 0.8,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -121,6 +126,7 @@ class LoginPage extends StatelessWidget {
                               alignment: Alignment.bottomRight,
                               child: GestureDetector(
                                 onTap: () {
+                                  debugPrint("Tapped on Login");
                                   // Navigate to the "/register" route
                                   Navigator.pushNamed(context, '/register');
                                 },
@@ -136,27 +142,36 @@ class LoginPage extends StatelessWidget {
                             ),
                           ],
                         ),
+                        const Row(
+                          children: [
+                            Expanded(
+                              child: Divider(
+                                color: Color(0xFF3DB2FF),
+                                thickness: 0.8,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Text(
+                          "Or Continue with",
+                          style: TextStyle(fontSize: 18.0),
+                        ),
                         const SizedBox(
                           height: 10.0,
                         ),
-                        const Text(
-                          "Or",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        const Text(
-                          "Continue With,",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            //Google
+                            MyImageButton(
+                              imagePath: "lib/assets/google.png",
+                            ),
+                            SizedBox(
+                              width: 30.0,
+                            ),
+                            //Apple
+                            MyImageButton(imagePath: "lib/assets/apple.png")
+                          ],
                         )
                       ],
                     ),
