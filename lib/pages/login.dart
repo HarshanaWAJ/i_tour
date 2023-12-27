@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
               height: 20.0,
             ),
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 40.0),
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
                     "Login",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 40.0,
+                      fontSize: 30.0,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -52,7 +52,7 @@ class LoginPage extends StatelessWidget {
                     "Welcome Back,",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                     ),
                   ),
                 ],
@@ -104,39 +104,17 @@ class LoginPage extends StatelessWidget {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        const Divider(
-                          color: Color(0xFF3DB2FF),
-                          thickness: 0.8,
-                        ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            const Align(
+                            Align(
                               alignment: Alignment.bottomLeft,
                               child: Text(
-                                "Forget Password",
+                                "Forgot Password?",
                                 style: TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black,
-                                ),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomRight,
-                              child: GestureDetector(
-                                onTap: () {
-                                  debugPrint("Tapped on Login");
-                                  // Navigate to the "/register" route
-                                  Navigator.pushNamed(context, '/register');
-                                },
-                                child: const Text(
-                                  "Register",
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.blue,
-                                  ),
                                 ),
                               ),
                             ),
@@ -172,7 +150,45 @@ class LoginPage extends StatelessWidget {
                             //Apple
                             MyImageButton(imagePath: "lib/assets/apple.png")
                           ],
-                        )
+                        ),
+                        const Divider(
+                          color: Color(0xFF3DB2FF),
+                          thickness: 0.8,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            const Text(
+                              "Note a Member?",
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 10.0,
+                            ),
+                            Align(
+                              alignment: Alignment.bottomRight,
+                              child: GestureDetector(
+                                onTap: () {
+                                  debugPrint("Tapped on Login");
+                                  // Navigate to the "/register" route
+                                  Navigator.pushNamed(context, '/register');
+                                },
+                                child: const Text(
+                                  "Register",
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
